@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './App.css'
+import SpendingChart from './SpendingChart'
 
 function App() {
   const [transactions, setTransactions] = useState([
@@ -80,6 +81,8 @@ function App() {
           <p className="balance-amount">${balance}</p>
         </div>
       </div>
+
+      <SpendingChart transactions={transactions} />
 
       <div className="add-transaction">
         <h2>Add Transaction</h2>
